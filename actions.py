@@ -4,6 +4,9 @@ from inverse import inverse
 from square_multiply import modular_pow
 from CRT import CRT
 
+# Handle RSA Initialization
+# @params nbits: int
+# @return RSAParams: {p: int, q: int, phi: int, e: int, d: int}
 def setup(nbits=512):
     p = get_rand_prime(nbits)
     q = get_rand_prime(nbits)
@@ -26,9 +29,14 @@ def setup(nbits=512):
         "d": d
     }
 
-
+# Handle encryption Action
+# @params msg: int, e: int, n: int
+# @return encrypted_msg: int
 def do_encryption(msg, e, n):
     return modular_pow(msg, e, n)
 
+# Handle decryption Action
+# @params msg: int, e: int, n: int
+# @return decrypted_msg: int
 def do_decryption(msg, d, p, q):
     return CRT(msg, d, p, q)

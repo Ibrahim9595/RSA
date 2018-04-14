@@ -1,3 +1,6 @@
+# Handle extended eculidian algorithm
+# @params ra: int, rb: int
+# @return rb^-1: int or -1 (in case of no inverse)
 def inverse(ra, rb):
     if rb > ra:
         ra, rb = rb, ra

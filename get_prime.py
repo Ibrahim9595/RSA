@@ -1,6 +1,9 @@
 from random import randrange
 from square_multiply import modular_pow
 
+# Handle analysing a prime to 2^u * r
+# @params num: int(prime)
+# @return (u, r)
 def get_u_r(num):
     u = 0
     num -= 1
@@ -14,6 +17,10 @@ def get_u_r(num):
     return (u, num)
 
 
+
+# Handle testing the primality of a number
+# @params p: int, s: int
+# @return isPrime: bool
 def miller_rabin(p, s):
     if p == 2:
         return True
@@ -36,6 +43,9 @@ def miller_rabin(p, s):
     return True
 
 
+# Handle generating a prime_number of nbits long
+# @params nbits: int
+# @return p: int(prime)
 def get_rand_prime(nbits=16):
     while True:
         p = randrange(2**nbits, 2*2**nbits)

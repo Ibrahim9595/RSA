@@ -1,3 +1,6 @@
+# Handle converting string to an int
+# @params msg: string
+# @return int_msg: int
 def msg_to_int(msg):
     int_msg = ""
     for ch in msg:
@@ -9,6 +12,9 @@ def msg_to_int(msg):
     return int(int_msg, 2)
 
 
+# Handle converting int to a string
+# @params i: int
+# @return msg: string
 def int_to_msg(i):
     bin_format = "{0:7b}".format(i)
     msg = ""

@@ -1,3 +1,6 @@
+# Handle square and multiply algoritm
+# @params b: int, p: int
+# @return b^p: int
 def squareAndMultiply(b, p):
     n_bits = len(str(bin(p))) - 2
     res = b
@@ -11,6 +14,9 @@ def squareAndMultiply(b, p):
     return res
 
 
+# Handle modular power
+# @params base: int, exponent: int, modulus: int
+# @return ((base ^ exponent) mod modulus): int
 def modular_pow(base, exponent, modulus):
     if modulus == 1:
         return 0

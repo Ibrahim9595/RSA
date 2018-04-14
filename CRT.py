@@ -1,6 +1,9 @@
 from inverse import inverse
 from square_multiply import modular_pow
 
+# Handle CRT Algorithm (get the modular exponent)
+# @params y: int, d: int, p: int, q: int
+# @return x: int
 def CRT(y, d, p, q):
     n = p*q
 
