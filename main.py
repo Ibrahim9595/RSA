@@ -21,9 +21,11 @@ def decryption(msg, d, p, q):
     return int_to_msg(decrypted)
 
 
-s = time()
-RSAparams = setup(512)
-s = time() - s
+s = time() # time start 
+RSAparams = setup(512) # initializing the RSA algorithm
+s = time() - s # time end
+
+# UI Start
 root = Tk()
 
 # Frames
